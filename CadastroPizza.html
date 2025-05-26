@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="Cardapio.html">
+
+    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">--><!--Icon da pagina-->
+
+<link href="removebg-preview.png" rel="icon" type="image/png"> <!--Icon da Aba-->
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"> 
+
+    <title>Teste de Cadastro</title>
+</head>
+<body>
+<!--Cadastro das Pizzas-->
+    <div id="Cadastro" class="hidden">
+        
+        <h3>Cadastro das Pizzas</h3>
+        <div class="CadastroPizza">
+        <label for="sabor">Sabor da Pizza:</label>
+        <input type="text" id="sabor">
+       
+        
+            <label for="Ingrediente">Ingredientes da Pizza:</label>
+            <input type="text" id="Ingrediente">
+         </br>
+         
+            <label for="valor">Digite o Valor da Pizza:</label>
+            <input type="number" id="valor">
+         </br>
+            <button onclick="addpizza()">Adicionar Pizza</button>
+            </div>
+            <div id="mensangem">
+    </div>
+
+
+<div id="consulta" class="hidden">
+            <h2>Consultar pizza</h2>
+            <input type="text" id="busca" placeholder="Buscar por Pizza"
+            oninput="BuscarPizza()">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nome da Pizza</th>
+                  <th>Ingredientes</th>
+                  <th>valor</th>
+                </tr>
+              </thead>
+              <tbody id="lista-pizza">
+    </div>
+</body>
+<script src="CadastroPizza.js"></script>
+</html>
