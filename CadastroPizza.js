@@ -50,7 +50,7 @@ function BuscarPizza() {
 }
 
 
-function atualizarLista(lista = biblioteca) {
+function atualizarLista(lista = cadastro) { 
   const tabela = document.getElementById("lista-pizza");
   tabela.innerHTML = "";
 
@@ -64,4 +64,10 @@ function atualizarLista(lista = biblioteca) {
     `;
     tabela.appendChild(tr);
   });
+}
+
+function Cardapio() {
+   document.getElementById(
+     "resultados-cardapio"
+   ).innerHTML = 
 }
