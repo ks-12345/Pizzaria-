@@ -19,7 +19,11 @@ let cadastro = [
 
   {sabor: "Margherita", Ingrediente: "Mussarela, tomate, manjericão, azeite", valor: 38}
 ];
-
+function (){
+  document.getElementById("Cadastro").classList.add("hidden");
+  document.getElementById("consulta").classList.add("hidden");
+  document.getElementById("Cardapio").classList.remove("hidden");
+}
 
 function addpizza() {
   const sabor = document.getElementById("sabor").value;
@@ -32,11 +36,11 @@ function addpizza() {
     document.getElementById("Ingrediente").value = "";
     document.getElementById("valor").value = "";
     document.getElementById(
-      "mensangem"
+      "mensagem"
     ).innerHTML = `Pizza ${sabor} Adicionada com Sucesso ao Cardapio!`;
   } else {
    document.getElementById(
-     "mensangem"
+     "mensagem"
    ).innerHTML = `<strong> Campo Vazio</strong>`;
   }
 }
@@ -57,10 +61,10 @@ function atualizarLista(lista = cadastro) {
   lista.forEach((pizza) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      ${pizza.sabor}
-      </br>
+    <td>  ${pizza.sabor}</td>
+      
       <td>${pizza.Ingrediente}</td>
-      </br>
+      
       <td>${pizza.valor}</td>
     `;
     tabela.appendChild(tr);
@@ -69,5 +73,7 @@ function atualizarLista(lista = cadastro) {
 
 //Fim Cadastros
 
-function Cardapio() {
-  document.getElementById("resultadoscardapio").innerHTML = `${cadastro}`}
+
+  function Cardapio() {
+  atualizarLista(lista = cadastro);
+}

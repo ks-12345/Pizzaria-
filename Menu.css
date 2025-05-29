@@ -1,0 +1,144 @@
+/* Reset básico */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Cabeçalho */
+h1 {
+    font-size: 2.5rem;
+    color: #d9534f;
+    margin-bottom: 20px;
+}
+
+/* Menu de navegação */
+#menu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#menu button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#menu button:hover {
+    background-color: #c9302c;
+}
+
+/* Seções ocultas */
+.hidden {
+    display: none;
+}
+
+/* Cadastro de Pizza */
+#Cadastro {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.CadastroPizza label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.CadastroPizza input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.CadastroPizza button {
+    background-color: #5bc0de;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.CadastroPizza button:hover {
+    background-color: #31b0d5;
+}
+
+/* Tabela de consulta */
+#consulta table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#consulta th,
+#consulta td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#consulta th {
+    background-color: #f2f2f2;
+}
+
+/* Cardápio */
+#Cardapio {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#Cardapio h2 {
+    color: #d9534f;
+    margin-bottom: 20px;
+}
+
+#Cardapio p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .CadastroPizza,
+    #Cardapio {
+        width: 90%;
+    }
+}

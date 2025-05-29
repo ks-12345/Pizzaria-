@@ -32,11 +32,11 @@ function addpizza() {
     document.getElementById("Ingrediente").value = "";
     document.getElementById("valor").value = "";
     document.getElementById(
-      "mensangem"
+      "mensagem"
     ).innerHTML = `Pizza ${sabor} Adicionada com Sucesso ao Cardapio!`;
   } else {
    document.getElementById(
-     "mensangem"
+     "mensagem"
    ).innerHTML = `<strong> Campo Vazio</strong>`;
   }
 }

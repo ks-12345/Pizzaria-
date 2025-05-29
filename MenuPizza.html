@@ -9,6 +9,8 @@
 </head>
 <body>
   <h1>Pizzaria Mestre da Pizza</h1>
+
+
   <div id="menu">
 <button onclick="CadastroPizza()">Cadastro de Pizza</button>
   <button onclick="Cardapio()">Cardapio</button>
@@ -35,8 +37,8 @@
             <input type="number" id="valor">
          </br>
             <button onclick="addpizza()">Adicionar Pizza</button>
-            </div>
-            <div id="mensangem">
+          
+            <div id="mensagem">
     </div>
 
 <div id="consulta" class="hidden">
@@ -47,22 +49,25 @@
               <thead>
                 <tr>
                   <th>Nome da Pizza</th>
-               <br>
+               
                   <th>Ingredientes</th>
-                  <br>
+                
                   <th>valor</th>
                    
                 </tr>
               </thead>
-              <div id="lista-pizza"></div>
+              <tbody id="lista-pizza">
+              </tbody>
+                  </table>
     </div>
 <!--Fim do Cadastro-->
 
 <!--Cardapio-->
-<div id="Cardapio">
+<div id="Cardapio" class="hidden">
 <h2>--Cardapio--</h2>
-<p id="resultadoscardapio"></p>
+<p id="menu"></p>
 </div>
+    </div>
 
 </body>
 <script src="MenuPizza.js"></script>
