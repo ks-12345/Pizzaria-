@@ -5,9 +5,9 @@ let cadastro = [
 
   { sabor: "Frango com Catupiry", Ingrediente: "Frango, catupiry, milho", valor: 45 },
 
-  {sabor: "Portuguesa", Ingrediente: "Presunto, ovo, cebola, azeitona, ervilha, queijo", valor: 47},
+  {sabor: "Portuguesa",  Ingrediente: "Presunto, ovo, cebola, azeitona, ervilha, queijo", valor: 47},
 
-  {sabor: "Quatro Queijos", Ingrediente: "Mussarela, provolone, parmesão, catupiry", valor: 50},
+  {sabor: "Quatro Queijos",  Ingrediente: "Mussarela, provolone, parmesão, catupiry", valor: 50},
 
   {sabor: "Pepperoni", Ingrediente: "Pepperoni, mussarela, molho de tomate", valor: 42},
 
@@ -57,7 +57,7 @@ function atualizarLista(lista = cadastro) {
   lista.forEach((pizza) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      <td>${pizza.sabor}</td>
+      ${pizza.sabor}
       </br>
       <td>${pizza.Ingrediente}</td>
       </br>
@@ -66,4 +66,8 @@ function atualizarLista(lista = cadastro) {
     tabela.appendChild(tr);
   });
 }
+
 //Fim Cadastros
+
+function Cardapio() {
+  document.getElementById("resultadoscardapio").innerHTML = `${cadastro}`}
