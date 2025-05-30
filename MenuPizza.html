@@ -11,12 +11,14 @@
   <h1>Pizzaria Mestre da Pizza</h1>
 
 
-  <div id="menu">
-<button onclick="CadastroPizza()">Cadastro de Pizza</button>
-  <button onclick="Cardapio()">Cardapio</button>
-  <button onclick="Bebida()">Bebidas</button>
-  <button onclick="Carrinho()">Carrinho</button>
-  <button onclick="Sobre()">sobre</button>
+  <div class="menu">
+<button onclick="mostrarSecao('Cadastro')">Cadastro de Pizza</button>
+<button onclick="mostrarSecao('consulta')">Consultar Pizzas</button>
+<button onclick="Alterar()">Alterar Pizza</button>
+<button onclick="Carrinho()">Carrinho</button>
+
+<button onclick="Relatorio()">Relatorio Mesal</button>
+  <button onclick="Sobre()">Sobre</button>
 
   </div>
 
@@ -26,6 +28,7 @@
   <div class="CadastroPizza">
       <label for="sabor">Sabor da Pizza:</label>
       <input type="text" id="sabor">
+      <br>
       <label for="Ingrediente">Ingredientes da Pizza:</label>
       <input type="text" id="Ingrediente">
       <br>
@@ -35,7 +38,9 @@
       <button onclick="addpizza()">Adicionar Pizza</button>
       <div id="mensagem"></div>
   </div>
-</div> <!-- FECHA AQUI O CADASTRO -->
+</div>
+<!-- FECHA AQUI O CADASTRO -->
+
 
 <!--Consulta das Pizzas-->
 <div id="consulta" class="hidden">
@@ -53,11 +58,6 @@
   </table>
 </div>
 
-<!--Cardapio-->
-<div id="Cardapio" class="hidden">
-  <h2>--Cardapio--</h2>
-  <p id="menu"></p>
-</div>
 
 </body>
 <script src="MenuPizza.js"></script>

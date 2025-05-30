@@ -1,144 +1,212 @@
-/* Reset básico */
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Estilos Gerais */
 
-/* Corpo da página */
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
+    /* Light gray background */
     color: #333;
-    line-height: 1.6;
+    /* Dark gray text */
+    margin: 0;
     padding: 20px;
-    text-align: center;
+    line-height: 1.6;
 }
 
-/* Cabeçalho */
 h1 {
-    font-size: 2.5rem;
+    text-align: center;
     color: #d9534f;
-    margin-bottom: 20px;
-}
-
-/* Menu de navegação */
-#menu {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+    /* Pizza red color */
     margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+    /* Use a more decorative font for title */
 }
 
-#menu button {
-    background-color: #d9534f;
+/* Main Menu Buttons */
+.menu {
+    text-align: center;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow buttons to wrap on smaller screens */
+    justify-content: center;
+    gap: 15px;
+    /* Spacing between buttons */
+}
+
+.menu button {
+    background-color: #5cb85c;
+    /* Green color */
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
+    padding: 12px 25px;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-#menu button:hover {
-    background-color: #c9302c;
+.menu button:hover {
+    background-color: #4cae4c;
+    /* Darker green on hover */
+    transform: translateY(-2px);
+    /* Slight lift effect */
 }
 
-/* Seções ocultas */
-.hidden {
-    display: none;
-}
-
-/* Cadastro de Pizza */
-#Cadastro {
+/* Sections (Cadastro, Consulta) */
+#Cadastro,
+#consulta {
     background-color: #fff;
-    padding: 20px;
+    /* White background for sections */
+    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 0 auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    margin-top: 30px;
+    max-width: 700px;
+    /* Limit width for better readability */
+    margin-left: auto;
+    margin-right: auto;
 }
 
+#Cadastro h3,
+#consulta h2 {
+    color: #d9534f;
+    /* Pizza red for section titles */
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* Form Styles (Cadastro) */
 .CadastroPizza label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
+    color: #555;
 }
 
-.CadastroPizza input {
-    width: 100%;
+.CadastroPizza input[type="text"],
+.CadastroPizza input[type="number"] {
+    width: calc(100% - 22px);
+    /* Adjust width considering padding and border */
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
+    border-radius: 4px;
+    font-size: 1em;
 }
 
 .CadastroPizza button {
-    background-color: #5bc0de;
+    background-color: #f0ad4e;
+    /* Orange color for action button */
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
+    padding: 12px 25px;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    display: block;
+    /* Make button block level */
+    width: fit-content;
+    /* Adjust width to content */
+    margin: 10px auto 0 auto;
+    /* Center the button */
 }
 
 .CadastroPizza button:hover {
-    background-color: #31b0d5;
+    background-color: #ec971f;
+    /* Darker orange on hover */
 }
 
-/* Tabela de consulta */
-#consulta table {
+#mensagem {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    min-height: 1.5em;
+    /* Reserve space for message */
+}
+
+/* Table Styles (Consulta) */
+#consulta input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
-#consulta th,
-#consulta td {
+thead {
+    background-color: #d9534f;
+    /* Pizza red for table header */
+    color: white;
+}
+
+th,
+td {
     padding: 12px;
-    border: 1px solid #ddd;
     text-align: left;
+    border-bottom: 1px solid #ddd;
+    /* Light gray border between rows */
 }
 
-#consulta th {
-    background-color: #f2f2f2;
+th {
+    font-weight: bold;
 }
 
-/* Cardápio */
-#Cardapio {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 0 auto;
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+    /* Slightly lighter gray for even rows */
 }
 
-#Cardapio h2 {
-    color: #d9534f;
-    margin-bottom: 20px;
+tbody tr:hover {
+    background-color: #f1f1f1;
+    /* Highlight row on hover */
 }
 
-#Cardapio p {
-    font-size: 1.1rem;
-    color: #555;
+/* Utility Class */
+.hidden {
+    display: none;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    #menu {
-        flex-direction: column;
-        gap: 15px;
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
     }
 
-    .CadastroPizza,
-    #Cardapio {
-        width: 90%;
+    .menu {
+        gap: 10px;
+    }
+
+    .menu button {
+        padding: 10px 15px;
+        font-size: 0.9em;
+        width: calc(50% - 10px);
+        /* Two buttons per row */
+    }
+
+    #Cadastro,
+    #consulta {
+        padding: 20px;
+    }
+
+    .CadastroPizza input[type="text"],
+    .CadastroPizza input[type="number"],
+    #consulta input[type="text"] {
+        width: calc(100% - 20px);
+    }
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 0.9em;
     }
 }

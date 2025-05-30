@@ -1,0 +1,179 @@
+/* Estilos Gerais para Cadastro.html */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    /* Fundo cinza claro */
+    color: #333;
+    /* Texto cinza escuro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Garante que o corpo ocupe toda a altura */
+    box-sizing: border-box;
+}
+
+/* Container Principal */
+.caixas {
+    background-color: #fff;
+    /* Fundo branco */
+    padding: 35px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    /* Largura máxima do formulário */
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Título */
+h2 {
+    color: #d9534f;
+    /* Vermelho pizza */
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+    /* Fonte decorativa */
+    font-size: 2em;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+    font-size: 0.95em;
+}
+
+/* Campos de Input (Texto e Senha) */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    /* Ocupa toda a largura disponível */
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+    /* Inclui padding e border na largura total */
+}
+
+/* Checkbox e Label dos Termos */
+label[for="termos"] {
+    display: inline-block;
+    /* Permite alinhar com o checkbox */
+    margin-left: 8px;
+    font-weight: normal;
+    color: #666;
+    font-size: 0.9em;
+    vertical-align: middle;
+    /* Alinha verticalmente com o checkbox */
+    text-align: left;
+}
+
+input[type="checkbox"] {
+    margin-bottom: 25px;
+    vertical-align: middle;
+    /* Alinha verticalmente com o label */
+    width: auto;
+}
+
+/* Botão de Cadastro */
+button {
+    background-color: #5cb85c;
+    /* Verde */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    /* Ocupa toda a largura */
+    margin-top: 10px;
+    /* Espaço acima do botão */
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #4cae4c;
+    /* Verde mais escuro */
+    transform: translateY(-2px);
+}
+
+/* Link para Login (Estilizando o h6 como um parágrafo) */
+h6 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    font-weight: normal;
+    color: #666;
+}
+
+h6 a {
+    color: #007bff;
+    /* Azul padrão para links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h6 a:hover {
+    text-decoration: underline;
+}
+
+/* Área de Mensagem */
+#mensagem {
+    margin-top: 20px;
+    font-weight: bold;
+    min-height: 1.5em;
+    /* Reserva espaço */
+    color: #d9534f;
+    /* Vermelho para erros (pode ser ajustado via JS) */
+}
+
+/* Remover <br> desnecessários (idealmente remover do HTML e usar margens CSS) */
+br {
+    display: none;
+    /* Esconde os <br> para usar espaçamento CSS */
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .caixas {
+        padding: 25px 20px;
+        margin: 20px;
+        /* Adiciona margem nas laterais em telas pequenas */
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    label[for="termos"] {
+        display: block;
+        /* Coloca o label acima do checkbox */
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    input[type="checkbox"] {
+        margin-bottom: 20px;
+        display: block;
+        /* Garante que o checkbox fique abaixo do label */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

@@ -19,18 +19,27 @@ let cadastro = [
 
   {sabor: "Margherita", Ingrediente: "Mussarela, tomate, manjericão, azeite", valor: 38}
 ];
-function (){
-  document.getElementById("Cadastro").classList.add("hidden");
-  document.getElementById("consulta").classList.add("hidden");
-  document.getElementById("Cardapio").classList.remove("hidden");
+
+function mostrarSecao(secao) {
+  // Lista de todas as seções disponíveis no seu código
+  const secoes = ["Cadastro", "consulta"];
+
+  // Esconde todas as seções antes de exibir a desejada
+  secoes.forEach((s) => {
+    document.getElementById(s).classList.add("hidden");
+  });
+
+  // Mostra apenas a seção selecionada
+  document.getElementById(secao).classList.remove("hidden");
 }
+
 
 function addpizza() {
   const sabor = document.getElementById("sabor").value;
   const Ingrediente = document.getElementById("Ingrediente").value;
   const valor = document.getElementById("valor").value;
   
-  if (sabor && Ingrediente) {
+  if (sabor && Ingrediente && valor) {
     cadastro.push({ sabor, Ingrediente, valor });
     document.getElementById("sabor").value = "";
     document.getElementById("Ingrediente").value = "";
@@ -53,6 +62,43 @@ function BuscarPizza() {
   atualizarLista(mensagem);
 }
 
+function buscarPizzaParaAlterar() {
+  const busca = document.getElementById("busca-alterar").value.toLowerCase();
+  PizzaParaAlterar = biblioteca.find((Pizza) =>
+    Pizza.Nome.toLowerCase().includes(busca)
+  );
+
+  if (PizzaParaAlterar) {
+    document.getElementById("form-alterar").classList.remove("hidden");
+    document.getElementById("novo-Nome").value = PizzaParaAlterar.Nome;
+    document.getElementById("novo-autor").value = PizzaParaAlterar.autor;
+    document.getElementById("novo-ano").value = PizzaParaAlterar.ano;
+  } else {
+    alert("Pizza não encontrado.");
+  }
+}
+
+//Alterar Pizza
+
+function alterarPizza() {
+  if (PizzaParaAlterar) {
+    const novoNome = document.getElementById("novo-Nome").value;
+    const novoAutor = document.getElementById("novo-autor").value;
+    const novoAno = parseInt(document.getElementById("novo-ano").value);
+
+    if (novoNome && novoAutor && novoAno) {
+      PizzaParaAlterar.Nome = novoNome;
+      PizzaParaAlterar.autor = novoAutor;
+      PizzaParaAlterar.ano = novoAno;
+
+      atualizarLista();
+      alert("Pizza alterado com sucesso!");
+      document.getElementById("form-alterar").classList.add("hidden");
+    } else {
+      alert("Por favor, preencha todos os campos.");
+    }
+  }
+}
 
 function atualizarLista(lista = cadastro) {
   const tabela = document.getElementById("lista-pizza");
@@ -73,7 +119,7 @@ function atualizarLista(lista = cadastro) {
 
 //Fim Cadastros
 
+//Começo Alterar Pizza
 
-  function Cardapio() {
-  atualizarLista(lista = cadastro);
-}
+
+
