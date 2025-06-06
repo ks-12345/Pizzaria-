@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="Menu.css">
+ <link rel="stylesheet" href="Menu.css">
   <link href="removebg-preview.png" rel="icon" type="image/png"> 
   <title>Menu Pizzaria</title>
 </head>
@@ -14,11 +14,11 @@
   <div class="menu">
 <button onclick="mostrarSecao('Cadastro')">Cadastro de Pizza</button>
 <button onclick="mostrarSecao('consulta')">Consultar Pizzas</button>
-<button onclick="Alterar()">Alterar Pizza</button>
-<button onclick="Carrinho()">Carrinho</button>
+<button onclick="mostrarSecao('alterar')">Alterar Pizza</button>
+<button onclick="mostrarSecao('Carrinho')">Carrinho</button>
 
-<button onclick="Relatorio()">Relatorio Mesal</button>
-  <button onclick="Sobre()">Sobre</button>
+<button onclick="mostrarSecao()">Relatorio Mensal</button>
+  <button onclick="Sobre()"><a href="sobre.html">Sobre</a></button>
 
   </div>
 
@@ -57,7 +57,31 @@
       <tbody id="lista-pizza"></tbody>
   </table>
 </div>
+<!-- FECHA AQUI A CONSULTA -->
 
+<!--Alterar Pizza-->
+<div id="alterar" class="hidden">
+                  <h2>Alterar Pizza</h2>
+                  <input type="text" id="busca-alterar" placeholder="Buscar por Pizza" oninput="buscarPizzaParaAlterar()">
+                  <div id="form-alterar" class="hidden">
+                    <div class="form-group">
+                      <label for="novo-sabor">Novo Sabor:</label>
+                      <input type="text" id="novo-sabor" placeholder="Digite o novo Sabor">
+                    </div>
+                    <div class="form-group">
+                      <label for="novo-Ingrediente">Novos Ingredientes:</label>
+                      <input type="text" id="novo-Ingrediente" placeholder="Digite os novos Ingredientes">
+                    </div>
+                    <div class="form-group">
+                      <label for="novo-valor">Novo valor:</label>
+                      <input type="number" id="novo-valor" placeholder="Digite o novo Valor">
+                    </div>
+                    <button onclick="alterarPizza()">Salvar Alterações</button>
+                    <div id="mensagem">fewgf</div>
+                  </div>
+                  <tbody id="lista-pizza"></tbody>
+      
+                </div>
 
 </body>
 <script src="MenuPizza.js"></script>

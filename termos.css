@@ -1,0 +1,37 @@
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #F5F5DC;
+    color: #36454F;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.terms-container {
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 40px auto;
+    line-height: 1.6;
+}
+
+.terms-container h2 {
+    color: #8B4513;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.terms-container h3 {
+    color: #2E8B57;
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.terms-container p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}

@@ -4,7 +4,7 @@ function Login() {
   const email = document.getElementById("email").value;
   const senha = document.getElementById("senha").value;
 
-  const emailadm = "usuario@exemplo.com";
+  const emailadm = "gerente@exemplo.com";
 const senhaadm = "1234";
 
   if (email === emailadm && senha === senhaadm) {

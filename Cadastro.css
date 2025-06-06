@@ -1,179 +1,297 @@
-/* Estilos Gerais para Cadastro.html */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
-    /* Fundo cinza claro */
-    color: #333;
-    /* Texto cinza escuro */
-    margin: 0;
-    padding: 0;
+    font-family: 'Playfair Display', serif;
+    /* Fonte base */
+    background-color: #F5F5DC;
+    /* Cor de fundo bege claro */
+    color: #36454F;
+    /* Cor do texto marrom escuro */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* Garante que o corpo ocupe toda a altura */
-    box-sizing: border-box;
+    margin: 0;
 }
 
-/* Container Principal */
-.caixas {
-    background-color: #fff;
-    /* Fundo branco */
-    padding: 35px 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    /* Largura máxima do formulário */
+.login,
+.cadastro {
+    background-color: #FFFFFF;
+    /* Fundo branco para as caixas de login/cadastro */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    box-sizing: border-box;
+    width: 350px;
+    /* Largura fixa para as caixas */
 }
 
-/* Título */
 h2 {
-    color: #d9534f;
-    /* Vermelho pizza */
-    margin-top: 0;
+    color: #8B4513;
+    /* Cor do título marrom */
     margin-bottom: 30px;
-    font-family: 'Playfair Display', serif;
-    /* Fonte decorativa */
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
-/* Labels */
-label {
+.caixas label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #555;
     text-align: left;
-    font-size: 0.95em;
 }
 
-/* Campos de Input (Texto e Senha) */
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    /* Ocupa toda a largura disponível */
-    padding: 12px;
+.caixas input[type="text"],
+.caixas input[type="password"] {
+    width: calc(100% - 20px);
+    /* Largura total menos padding */
+    padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
     font-size: 1em;
-    box-sizing: border-box;
-    /* Inclui padding e border na largura total */
 }
 
-/* Checkbox e Label dos Termos */
-label[for="termos"] {
-    display: inline-block;
-    /* Permite alinhar com o checkbox */
-    margin-left: 8px;
-    font-weight: normal;
-    color: #666;
-    font-size: 0.9em;
-    vertical-align: middle;
-    /* Alinha verticalmente com o checkbox */
-    text-align: left;
-}
-
-input[type="checkbox"] {
-    margin-bottom: 25px;
-    vertical-align: middle;
-    /* Alinha verticalmente com o label */
-    width: auto;
-}
-
-/* Botão de Cadastro */
-button {
-    background-color: #5cb85c;
-    /* Verde */
+.caixas button {
+    background-color: #2E8B57;
+    /* Cor de fundo verde para o botão */
     color: white;
+    padding: 12px 25px;
     border: none;
-    padding: 12px 30px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.1em;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    width: 100%;
-    /* Ocupa toda a largura */
-    margin-top: 10px;
-    /* Espaço acima do botão */
-    box-sizing: border-box;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #4cae4c;
-    /* Verde mais escuro */
-    transform: translateY(-2px);
+.caixas button:hover {
+    background-color: #3CB371;
+    /* Cor de fundo verde mais claro ao passar o mouse */
 }
 
-/* Link para Login (Estilizando o h6 como um parágrafo) */
-h6 {
-    margin-top: 25px;
-    margin-bottom: 15px;
+.caixas h6 {
+    margin-top: 20px;
     font-size: 0.9em;
-    font-weight: normal;
-    color: #666;
 }
 
-h6 a {
-    color: #007bff;
-    /* Azul padrão para links */
+.caixas h6 a {
+    color: #8B4513;
+    /* Cor do link marrom */
     text-decoration: none;
-    font-weight: bold;
 }
 
-h6 a:hover {
+.caixas h6 a:hover {
     text-decoration: underline;
 }
 
-/* Área de Mensagem */
 #mensagem {
     margin-top: 20px;
+    color: red;
     font-weight: bold;
-    min-height: 1.5em;
-    /* Reserva espaço */
-    color: #d9534f;
-    /* Vermelho para erros (pode ser ajustado via JS) */
 }
 
-/* Remover <br> desnecessários (idealmente remover do HTML e usar margens CSS) */
-br {
-    display: none;
-    /* Esconde os <br> para usar espaçamento CSS */
+
+
+
+.login-container {
+    display: flex;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    /* Ajuste conforme necessário */
+    overflow: hidden;
 }
 
-/* Responsividade */
-@media (max-width: 480px) {
-    .caixas {
-        padding: 25px 20px;
-        margin: 20px;
-        /* Adiciona margem nas laterais em telas pequenas */
-    }
+.logo-section {
+    background-color: #F5DEB3;
+    /* Cor de fundo para a seção do logo */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    /* Ajuste conforme necessário */
+}
 
-    h2 {
-        font-size: 1.8em;
-    }
+.pizza-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
 
-    button {
-        padding: 10px 20px;
-        font-size: 1em;
-    }
+.logo-section h1 {
+    color: #8B4513;
+    font-size: 2em;
+    margin-bottom: 5px;
+}
 
-    label[for="termos"] {
-        display: block;
-        /* Coloca o label acima do checkbox */
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
+.logo-section h2 {
+    color: #8B4513;
+    font-size: 1.5em;
+    margin-top: 0;
+}
 
-    input[type="checkbox"] {
-        margin-bottom: 20px;
-        display: block;
-        /* Garante que o checkbox fique abaixo do label */
-        margin-left: auto;
-        margin-right: auto;
-    }
+.login-form-section {
+    padding: 40px;
+    width: 60%;
+    /* Ajuste conforme necessário */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form-section h2 {
+    color: #8B4513;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+.login-form-section .caixas {
+    width: 100%;
+    max-width: 300px;
+    /* Largura máxima para os campos de input */
+}
+
+.login-form-section .caixas label {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.login-form-section .caixas input[type="text"],
+.login-form-section .caixas input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.login-form-section .caixas button {
+    background-color: #2E8B57;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.login-form-section .caixas button:hover {
+    background-color: #3CB371;
+}
+
+.login-form-section .caixas h6 {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.login-form-section .caixas h6 a {
+    color: #8B4513;
+    text-decoration: none;
+}
+
+.login-form-section .caixas h6 a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+.cadastro-container {
+    display: flex;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    /* Ajuste conforme necessário */
+    overflow: hidden;
+}
+
+.cadastro-form-section {
+    padding: 40px;
+    width: 60%;
+    /* Ajuste conforme necessário */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cadastro-form-section h2 {
+    color: #8B4513;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+.cadastro-form-section .caixas {
+    width: 100%;
+    max-width: 300px;
+    /* Largura máxima para os campos de input */
+}
+
+.cadastro-form-section .caixas label {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.cadastro-form-section .caixas input[type="text"],
+.cadastro-form-section .caixas input[type="password"],
+.cadastro-form-section .caixas input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.cadastro-form-section .caixas input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.cadastro-form-section .caixas button {
+    background-color: #2E8B57;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.cadastro-form-section .caixas button:hover {
+    background-color: #3CB371;
+}
+
+.cadastro-form-section .caixas h6 {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.cadastro-form-section .caixas h6 a {
+    color: #8B4513;
+    text-decoration: none;
+}
+
+.cadastro-form-section .caixas h6 a:hover {
+    text-decoration: underline;
+}
+
+.cadastro-form-section .caixas label a {
+    color: #8B4513;
+    text-decoration: none;
+}
+
+.cadastro-form-section .caixas label a:hover {
+    text-decoration: underline;
 }
