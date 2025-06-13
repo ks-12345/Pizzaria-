@@ -49,22 +49,28 @@ h1 {
 }
 
 /* Estilos para as seções de cadastro, consulta e alterar */
+#Cardapio,
 #Cadastro,
 #consulta,
-#alterar {
+#alterar,
+#Carrinho,
+#final, 
+#Relatorio{
     background-color: #FFFFFF;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 80%;
-    max-width: 700px;
+    max-width: 750px;
     margin-bottom: 20px;
     text-align: center;
 }
 
+#Cardapio h2,
 #Cadastro h3,
 #consulta h2,
-#alterar h2 {
+#alterar h2,
+#Carrinho h2 {
     color: #8B4513;
     margin-bottom: 20px;
     font-size: 2em;
@@ -83,7 +89,8 @@ h1 {
 .CadastroPizza input[type="number"],
 #consulta input[type="text"],
 #alterar input[type="text"],
-#alterar input[type="number"] {
+#alterar input[type="number"], 
+#final input[type="text"]{
     width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 15px;
@@ -93,7 +100,8 @@ h1 {
 }
 
 .CadastroPizza button,
-#alterar button {
+#alterar button
+#final button{
     background-color: #2E8B57;
     color: white;
     padding: 12px 25px;
@@ -106,11 +114,29 @@ h1 {
 }
 
 .CadastroPizza button:hover,
-#alterar button:hover {
+#alterar button:hover,
+#Cardapio button:hover,
+#final button:hover {
     background-color: #3CB371;
 }
 
-#mensagem {
+#Cardapio button,
+#final button {
+    background-color: #2E8B57;
+    color: white;
+    padding: 6px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#mensagem 
+#mensagem1
+#mensagemCardapio
+#PizzaAlterada{
     margin-top: 20px;
     color: red;
     font-weight: bold;

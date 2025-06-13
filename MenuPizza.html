@@ -12,15 +12,39 @@
 
 
   <div class="menu">
+<button onclick="mostrarSecao('Cardapio')">Cardapio</button>
 <button onclick="mostrarSecao('Cadastro')">Cadastro de Pizza</button>
 <button onclick="mostrarSecao('consulta')">Consultar Pizzas</button>
 <button onclick="mostrarSecao('alterar')">Alterar Pizza</button>
 <button onclick="mostrarSecao('Carrinho')">Carrinho</button>
 
-<button onclick="mostrarSecao()">Relatorio Mensal</button>
-  <button onclick="Sobre()"><a href="sobre.html">Sobre</a></button>
+<button onclick="mostrarSecao('Relatorio')">Relatorio de Vendas</button>
+  <button onclick="Sobre('Sobre')"><a href="sobre.html">Sobre</a></button>
 
   </div>
+</div>
+
+
+<!--Cardapio-->
+<div id="Cardapio" class="hidden">
+  <h2>Bem-vindo ao Cardápio</h2>
+  <p>Selecione uma opção do menu para começar.</p>
+  <div id="mensagemCardapio"></div>
+  <table>
+      <thead>
+          <tr>
+              <th>Nome da Pizza</th>
+              <th>Ingredientes</th>
+              <th>valor</th>
+              <th>Adicionar</th>
+              
+      </thead>
+      
+      <tbody id="lista-pizza-cardapio"></tbody>
+  </table>
+  
+</div>
+</div>
 
  <!--Cadastro das Pizzas-->
 <div id="Cadastro" class="hidden">
@@ -51,7 +75,7 @@
           <tr>
               <th>Nome da Pizza</th>
               <th>Ingredientes</th>
-              <th>valor</th>
+              <th>valor         </th>
           </tr>
       </thead>
       <tbody id="lista-pizza"></tbody>
@@ -77,11 +101,69 @@
                       <input type="number" id="novo-valor" placeholder="Digite o novo Valor">
                     </div>
                     <button onclick="alterarPizza()">Salvar Alterações</button>
-                    <div id="mensagem">fewgf</div>
+                   <div id="PizzaAlterada"></div>
                   </div>
+                   
                   <tbody id="lista-pizza"></tbody>
       
                 </div>
+
+
+ <!--Carrinho-->
+  <div id="Carrinho" class="hidden">
+  <h2>Carrinho de Pedidos</h2>
+  <p>Adicione as Pizzas na seção Cardapio</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Nome da Pizza</th>
+        <th>Valor</th>
+      </tr>
+    </thead>
+    <tbody id="lista-pizza-carrinho"></tbody>
+    <tfoot>
+      <tr>
+        <th>Valor Total</th>
+        <th id="Total"></th>
+      </tr>
+    </tfoot>
+  </table>
+  <button onclick="mostrarSecao('final')">Avançar</button>
+</div>
+
+
+  <!--Finalizar compra-->
+<div id="final" class="hidden">
+  <h2>Finalizar Pedido</h2>
+  <label for="nomecliente">Nome:</label>
+  <input type="text" id="nomecliente" placeholder="Digite seu Nome">   
+  <label for="Cep">Enderenço</label>
+  <input type="text" id="Cep" placeholder="Digite seu Enderenço">   
+  <div id="mensagemFinal"></div>
+  <button onclick="finalizarPedido()">Finalizar Pedido</button>
+</div>
+
+
+       
+   <div id="Relatorio" class="hidden">
+  <h2>Relatorio de Vendas</h2>
+
+ <table>
+      <thead>
+          <tr>
+              <th>Nome do Cliente</th>
+              <th>Valor</th>
+            
+      </thead>
+     
+      <tbody id="Vendas-Relatorio"></tbody>
+       <th>Total de Vendas</th>
+      <th><div id="TotalRelatorio"></div></th>
+  </table>
+
+
+
+
 
 </body>
 <script src="MenuPizza.js"></script>

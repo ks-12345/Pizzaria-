@@ -7,8 +7,8 @@ function Cadastro() {
   const senha2 = document.getElementById("senha2").value;
   let termos = document.getElementById("termos");
 
-  if (email === "usuario@exemplo.com" && senha === "1234") {
-    document.getElementById("mensagem").innerHTML = `Bem Vindo de Volta Gerente`;
+  if (email === "gerente@exemplo.com" && senha === "1234") {
+    document.getElementById("mensagem").innerHTML = `Usuario já cadastrado`;
     } else if (senha !== senha2) {
     document.getElementById("mensagem").innerHTML = '<strong> Senhas não conferem</strong>';
   } else if (email && senha == senha2 && termos.checked == true) {
